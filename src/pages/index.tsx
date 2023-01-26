@@ -18,6 +18,9 @@ import Image from "next/image";
 export default function VehicleHome() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
+
+  // const testDriver = api.driver.driverTest.useQuery();
+  // const testInput = api.driver.getDriver.useQuery({ id: "Input String" });
   return (
     <>
       <Head>
@@ -62,7 +65,8 @@ export default function VehicleHome() {
           <div className="flex flex-row justify-center py-5">
             <GoLocation className="mr-5" />
             <button className="text-2xl">
-              Select Zone
+              Select Zone. 
+              {/* Test: {testDriver.data} */}
             </button>
           </div>
 
@@ -70,7 +74,8 @@ export default function VehicleHome() {
           <div className="flex flex-row justify-center py-5">
             <AiOutlineCar className="mr-5" />
             <button className="text-2xl">
-              Vehicle Details
+              Vehicle Details. 
+              {/* Test Input: {testInput.data?.greeting} */}
             </button>
           </div>
 

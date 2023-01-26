@@ -4,7 +4,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import {MdOutlineHistoryToggleOff} from "react-icons/md"
+import { MdOutlineHistoryToggleOff } from "react-icons/md"
 
 const Home: NextPage = () => {
   return (
