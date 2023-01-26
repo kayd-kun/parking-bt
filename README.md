@@ -9,6 +9,7 @@ Instructions:
 git pull
 git add .
 git commit -m "[Your Work Description]"
+git push -u origin main
 ```
 
 ## Setting up your project
@@ -24,7 +25,8 @@ yarn install
 
 # To run the project
 npx prisma db push
-#
+
+# Run the project
 npm run dev
 # or
 yarn dev
@@ -34,7 +36,7 @@ yarn dev
 
 ## Driver Screens
 - [ ] Home Page
-- [ ] Vehicle No, Type input Page
+- [ ] Vehicle No and Vehicle type input Page
 - [ ] District List Page
 - [ ] Zones List Page
 - [ ] Parking Session Page
