@@ -1,28 +1,75 @@
-# Create T3 App
+**Created Using T3 Stack**
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# IMPORTANT!!! - Uploading your code
+When you are done with your part and when you are ready to commit/upload code to this repository.
 
-## What's next? How do I make an app with this?
+Instructions:
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+```bash
+git pull
+git add .
+git commit -m "[Your Work Description]"
+```
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Setting up your project
+
+Instructions:
+
+```bash
+git clone https://github.com/kayd-kun/parking-bt.git
+cd parking-bt
+npm install
+# or 
+yarn install
+
+# To run the project
+npx prisma db push
+#
+npm run dev
+# or
+yarn dev
+
+```
+# UI Tasks
+
+## Driver Screens
+- [ ] Home Page
+- [ ] Vehicle No, Type input Page
+- [ ] District List Page
+- [ ] Zones List Page
+- [ ] Parking Session Page
+- [ ] Offense Status Page (The page where it shows if previous offenses exist or not)
+- [ ] Offense Details Page
+- [ ] Payment Confirmation Page after RMA API
+- [ ] Vehicle's past parking sessions Page
+
+## PA Screens
+- [ ] Login Page
+- [ ] OTP Page
+- [ ] Home Page (Search Tab, History Tab and Nav Bar)
+- [ ] Make Report Page (Where PA enters the vehicle's details and the offense details)
+
+## Admin Screens
+**Note: Admin Screens are not yet finalized**
+
+- [ ] Redesign 
+
+# Backend Tasks
+
+- [ ] Magic Link Integration
+- [ ] OTP Service with Firebase
+- [ ] Connect Prisma with MySQL and with the stack
+- [ ] Test Prisma Queries
+- [ ] Logic for mistake reports from PA
+- [ ] Mock RMA API
+- [ ] Handle API endpoints
+
+# API Tasks
+
+## T3 Stack Links
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
