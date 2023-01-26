@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import {MdOutlineHistoryToggleOff} from "react-icons/md"
 
 const Home: NextPage = () => {
   return (
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
 
     <div>
       <Link href="/vehicle/bookinghistory" className="fixed top-7 left-45 right-2">
-           Booking History
+           <MdOutlineHistoryToggleOff className="w-10 h-10 text-gray-500" />
       </Link>
     </div>
   
