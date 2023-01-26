@@ -1,3 +1,7 @@
+// ===================================
+// www.parking.bt/ - Kamal Acharya
+// ===================================
+
 // import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -22,9 +26,7 @@ export default function VehicleHome() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex justify-center flex-col">
-        <Link href="/vehicle/pastReportDetails">
-            Past Reports
-        </Link>
+        
         {/* Search and Check Status Button */}
         <div>
           <fieldset className="w-full space-y-1 dark:text-gray-100 py-4 flex justify-center">

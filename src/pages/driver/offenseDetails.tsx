@@ -1,3 +1,6 @@
+// ===================================
+// /driver/offenseDetails - Dechen Pelden
+// ===================================
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -23,8 +26,7 @@ const Home: NextPage = () => {
         <path
           fill-rule="evenodd"
           d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-          clip-rule="evenodd"/>
-      </svg>
+          clip-rule="evenodd"/> </svg>
     </a>
     </div>
     <div>
@@ -32,7 +34,7 @@ const Home: NextPage = () => {
     </div>
 
     <div>
-      <Link href="/vehicle/bookinghistory" className="fixed top-7 left-45 right-2">
+      <Link href="/driver/parkingHistory" className="fixed top-7 left-45 right-2">
            <MdOutlineHistoryToggleOff className="w-10 h-10 text-gray-500" />
       </Link>
     </div>
