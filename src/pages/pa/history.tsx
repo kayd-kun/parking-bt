@@ -6,7 +6,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-const Home: NextPage = () => {
+const History: NextPage = () => {
     return (
         <>
             <Head>
@@ -389,4 +389,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default History;
