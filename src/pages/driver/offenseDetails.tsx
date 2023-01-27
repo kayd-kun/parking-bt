@@ -4,7 +4,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { MdOutlineHistoryToggleOff } from "react-icons/md"
+import {MdOutlineHistoryToggleOff} from "react-icons/md"
 
 const Home: NextPage = () => {
   return (
@@ -16,39 +16,53 @@ const Home: NextPage = () => {
       </Head>
       <main >
       
-      
-      <div className="flex flex-col ma-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
-        <div >
-          <div className="fixed top-6 left-2 right-0">
+      <div className="flex-col ma-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+        <div>
+          <div className="fixed top-6 left-5 right-0">
         <a href="#" className="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100">
       <span className="sr-only">Prev Page</span>
       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path
           fill-rule="evenodd"
           d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-          clip-rule="evenodd"/> </svg>
+          clip-rule="evenodd"/>
+      </svg>
     </a>
     </div>
     <div>
-        <h2 className="flex flex-col justify-center items-center text-xl font-semibold"  >Details</h2>
+        <h2 className="flex flex-col justify-center items-center text-xl font-semibold md:text-4xl" >Details</h2>
     </div>
 
     <div>
-      <Link href="/driver/parkingHistory" className="fixed top-7 left-45 right-2">
-           <MdOutlineHistoryToggleOff className="w-10 h-10 text-gray-500" />
+      <Link href="/driver/parkingHistory" className="fixed top-7 left-45 right-5">
+           <MdOutlineHistoryToggleOff className="w-6 h-6 text-gray-500" />
       </Link>
     </div>
   
   </div>
-
+    <div className="bg-sky-300 md:w-1/3 lg:w-3/4">
         <ul className="flex flex-col divide-y divide-gray-700">
-          <li className="flex flex-col py-6 sm:flex-row sm:justify-between gap-10 ">
+          <li className="flex flex-col flex-direction-row py-6 gap-10 ">
             <div className="flex w-full space-x-10 sm:space-x-4 shadow-xl shadow-blue-100">
               <img className="flex-shrink-0 object-contain w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src="https://thumbs.dreamstime.com/b/phuntsholingsstad-74842242.jpg&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=0" alt="Zandhopelri" />
               <div className="flex flex-col justify-between w-full pb-4">
                 <div className="flex justify-between w-full pb-2 space-x-2">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
+                    <p className="text-sm dark:text-gray-400 md:text-4xl">12/12/2022</p>
+                    <p className="text-sm dark:text-gray-400 md:text-4xl">Parking is in wrong place</p>
+                    <span className="text-sm text-red-600md:text-4xl ">Fine cost: Nu.30</span>
+                  </div>
+                </div>      	
+              </div>
+            </div>
+
+            <div className="flex w-full space-x-10 sm:space-x-4 shadow-xl shadow-blue-100">
+              <img className="flex-shrink-0 object-contain w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src="https://thumbs.dreamstime.com/b/phuntsholingsstad-74842242.jpg&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=0" alt="Zandhopelri" />
+              <div className="flex flex-col justify-between w-full pb-4">
+                <div className="flex justify-between w-full pb-2 space-x-2">
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
                     <p className="text-sm dark:text-gray-400">12/12/2022</p>
                     <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
                     <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
@@ -63,7 +77,7 @@ const Home: NextPage = () => {
               <div className="flex flex-col justify-between w-full pb-4">
                 <div className="flex justify-between w-full pb-2 space-x-2">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
                     <p className="text-sm dark:text-gray-400">12/12/2022</p>
                     <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
                     <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
@@ -78,7 +92,7 @@ const Home: NextPage = () => {
               <div className="flex flex-col justify-between w-full pb-4">
                 <div className="flex justify-between w-full pb-2 space-x-2">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
                     <p className="text-sm dark:text-gray-400">12/12/2022</p>
                     <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
                     <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
@@ -93,7 +107,7 @@ const Home: NextPage = () => {
               <div className="flex flex-col justify-between w-full pb-4">
                 <div className="flex justify-between w-full pb-2 space-x-2">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
                     <p className="text-sm dark:text-gray-400">12/12/2022</p>
                     <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
                     <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
@@ -108,22 +122,7 @@ const Home: NextPage = () => {
               <div className="flex flex-col justify-between w-full pb-4">
                 <div className="flex justify-between w-full pb-2 space-x-2">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
-                    <p className="text-sm dark:text-gray-400">12/12/2022</p>
-                    <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
-                    <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
-                  </div>
-                </div>
-                    	
-              </div>
-            </div>
-
-            <div className="flex w-full space-x-10 sm:space-x-4 shadow-xl shadow-blue-100">
-              <img className="flex-shrink-0 object-contain w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src="https://thumbs.dreamstime.com/b/phuntsholingsstad-74842242.jpg&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=0" alt="Zandhopelri" />
-              <div className="flex flex-col justify-between w-full pb-4">
-                <div className="flex justify-between w-full pb-2 space-x-2">
-                  <div className="space-y-1">
-                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">Zangdhopelri</h3>
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8 md:text-4xl">Zangdhopelri</h3>
                     <p className="text-sm dark:text-gray-400">12/12/2022</p>
                     <p className="text-sm dark:text-gray-400">Parking is in wrong place</p>
                     <span className="text-sm text-red-600 ">Fine cost: Nu.30</span>
@@ -135,6 +134,7 @@ const Home: NextPage = () => {
             
           </li>
         </ul>
+      </div>
       </div>
       </main>
       
