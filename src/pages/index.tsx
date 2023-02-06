@@ -112,10 +112,11 @@ export default function VehicleHome() {
           </div> */}
 
           <div className="flex justify-center pt-6">
-
-            <button type="button" className="w-3/4 sm:w-1/2 px-3 py-3 font-semibold text-xl ml-2 rounded-full bg-fuchsia-400 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
-              Continue
-            </button>
+            <Link href={"/driver/offenseStatus"} className="w-3/4 sm:w-1/2"  >
+                <button className=" px-3 py-3 font-semibold text-xl ml-2 rounded-full bg-fuchsia-400 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
+                  Continue
+                </button>
+            </Link>
           </div>
 
 

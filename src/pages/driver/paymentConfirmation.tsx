@@ -1,10 +1,11 @@
 // ===================================
 // /driver/paymentConfirmation - Sonam Deki
 // ===================================
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/link";
 
-export default function PaymentConfirmation () {
-  return(
+export default function PaymentConfirmation() {
+  return (
     <>
       <Head>
         <title>Create T3 App</title>
@@ -13,49 +14,67 @@ export default function PaymentConfirmation () {
       </Head>
       <main>
         <div className="pt-14">
-          <div 
-          className=" flex
-          max-w-fit 
-          max-h-fit 
-          flex-col 
-          flex-auto
-          items-center 
-          p-10
-          mx-w-sm 
+          <div
+            className=" mx-w-sm
           mx-auto 
-          bg-[#0D76D7]
-          rounded-xl 
-          shadow-lg 
-          space-x-4 
           mt-6 
-          text-center ">
-            <h1 className="pb-1 text-white" p-4>Your Payment Has been Successful !</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-10 h-10">
-             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          flex 
+          max-h-fit
+          max-w-fit 
+          flex-auto
+          flex-col 
+          items-center 
+          space-x-4
+          rounded-xl 
+          bg-[#0D76D7] 
+          p-10 
+          text-center 
+          shadow-lg "
+          >
+            <h1 className="pb-1 text-white" p-4>
+              Your Payment Has been Successful !
+            </h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="h-10 w-10"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+              />
             </svg>
-            <p className="text-white p-4 pb-2  ">Nu:50</p>
+            <p className="p-4 pb-2 text-white  ">Nu:50</p>
           </div>
           <div>
-            <h1 className="p-4 pt-12 text-[12px] text-center">Click Here To Know Your Parking Status</h1>
-            <div className="flex space-x-2 justify-center">
-              <a href="/fine">
-              <button 
-              type="button"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-              className ="inline-block 
+            <h1 className="p-4 pt-12 text-center text-[12px]">
+              Click Here To Know Your Parking Status
+            </h1>
+            <div className="flex justify-center space-x-2">
+              <Link href="/driver/checkSession">
+                <button
+                  type="button"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                  className="inline-block 
+              rounded-full bg-[#0D76D7] 
               px-28 py-2.5 
-              bg-[#0D76D7] text-white 
-              font-medium text-xs 
-              leading-tight uppercase 
-              rounded-full shadow-md hover:bg-blue-700 
-              hover:shadow-lg focus:bg-blue-700 
-              focus:shadow-lg focus:outline-none focus:ring-0
-               active:bg-white active:shadow-lg 
-              transition duration-150 ease-in-out"> Parking Session
-              </button>
-              </a>
-            </div> 
+              text-xs font-medium 
+              uppercase leading-tight 
+              text-white shadow-md transition 
+              duration-150 ease-in-out 
+              hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
+               focus:shadow-lg focus:outline-none 
+              focus:ring-0 active:bg-white active:shadow-lg"
+                >
+                  Parking Session
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
