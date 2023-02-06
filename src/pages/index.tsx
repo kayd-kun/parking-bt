@@ -53,7 +53,7 @@ export default function VehicleHome() {
         {/* Zone Image Area */}
         {/* In code: if zoneSelected ? zoneImg: ParkingImg */}
         <div className="flex justify-center">
-          <Image src="/Logo.png" alt="Picture of the author" width={350} height={350} />
+          <Image src="/logo.png" alt="Picture of the author" width={350} height={350} />
         </div>
 
         {/* Vehicle Detail input Section */}
