@@ -18,7 +18,6 @@ import Image from "next/image";
 export default function VehicleHome() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
-
   // const testDriver = api.driver.driverTest.useQuery();
   // const testInput = api.driver.getDriver.useQuery({ id: "Input String" });
   return (
@@ -28,21 +27,32 @@ export default function VehicleHome() {
         <meta name="description" content="Bhutan Parking App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex justify-center flex-col">
-        
+      <main className="flex flex-col justify-center">
         {/* Search and Check Status Button */}
         <div>
-          <fieldset className="w-full space-y-1 dark:text-gray-100 py-4 flex justify-center">
+          <fieldset className="flex w-full justify-center space-y-1 py-4 dark:text-gray-100">
             <label className="hidden">Search</label>
             <div className="relative">
               <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                <button type="button" title="search" className="p-1 focus:outline-none focus:ring">
-                  <BiSearchAlt className="w-5 h-5 text-gray-400" />
+                <button
+                  type="button"
+                  title="search"
+                  className="p-1 focus:outline-none focus:ring"
+                >
+                  <BiSearchAlt className="h-5 w-5 text-gray-400" />
                 </button>
               </span>
-              <input type="search" name="search" placeholder="BP-1-A1234" className="w-2/4 py-2 pl-10 ml-2 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900 focus:dark:border-teal-400" />
+              <input
+                type="search"
+                name="search"
+                placeholder="BP-1-A1234"
+                className="ml-2 w-2/4 rounded-md py-2 pl-10 text-sm focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:border-teal-400 focus:dark:bg-gray-900 sm:w-auto"
+              />
               <Link href="/vehicle/status">
-                <button type="button" className="w-30 px-4 py-2 ml-2 inline rounded-full bg-fuchsia-400 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
+                <button
+                  type="button"
+                  className="w-30 ml-2 inline rounded-full bg-fuchsia-400 px-4 py-2 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800"
+                >
                   Check Session
                 </button>
               </Link>
@@ -53,43 +63,62 @@ export default function VehicleHome() {
         {/* Zone Image Area */}
         {/* In code: if zoneSelected ? zoneImg: ParkingImg */}
         <div className="flex justify-center">
-          <Image src="/logo.png" alt="Picture of the author" width={350} height={350} />
+          <Image
+            src="/logo.png"
+            alt="Picture of the author"
+            width={350}
+            height={350}
+          />
         </div>
 
         {/* Vehicle Detail input Section */}
 
         {/* TODO: Redo this section using GRID - The icons needs to be aligned together  */}
 
-        <div className="divide-y-2 divide-gray-400 flex flex-col justify-center">
-
+        <div className="flex flex-col justify-center divide-y-2 divide-gray-400">
           <div className="flex flex-row justify-center py-5">
-            <GoLocation className="mr-5" />
-            <button className="text-2xl">
-              Select Zone. 
-              {/* Test: {testDriver.data} */}
-            </button>
+            <GoLocation className="mr-5 mt-2 h-5 w-5" />
+            <Link href={"/driver/districts"}>
+              <button className="text-2xl">
+                Select Zone.
+                {/* Test: {testDriver.data} */}
+              </button>
+            </Link>
           </div>
 
-
           <div className="flex flex-row justify-center py-5">
-            <AiOutlineCar className="mr-5" />
+            <AiOutlineCar className="mr-5 mt-2 h-5 w-5" />
             <button className="text-2xl">
-              Vehicle Details. 
+              Vehicle Details.
               {/* Test Input: {testInput.data?.greeting} */}
             </button>
           </div>
 
           {/* Timer Selection */}
           <div className="flex justify-center py-6">
-            <label htmlFor="Quantity" className="sr-only"> Quantity </label>
-            <div className="flex items-center border border-gray-200 divide-x divide-gray-200 rounded">
-              <button type="button" className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75">
+            <label htmlFor="Quantity" className="sr-only">
+              {" "}
+              Quantity{" "}
+            </label>
+            <div className="flex items-center divide-x divide-gray-200 rounded border border-gray-200">
+              <button
+                type="button"
+                className="h-10 w-10 leading-10 text-gray-600 transition hover:opacity-75"
+              >
                 −
               </button>
               <span>
-                <input type="number" id="Quantity" defaultValue={30} className="h-10 w-16 border-transparent text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
+                <input
+                  type="number"
+                  id="Quantity"
+                  defaultValue={30}
+                  className="h-10 w-16 border-transparent text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
               </span>
-              <button type="button" className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75">
+              <button
+                type="button"
+                className="h-10 w-10 leading-10 text-gray-600 transition hover:opacity-75"
+              >
                 +
               </button>
             </div>
@@ -97,11 +126,11 @@ export default function VehicleHome() {
 
           {/* End and Total Cost Section */}
           <div className="flex flex-row divide-x divide-gray-400">
-            <div className="w-1/2 text-center py-6">
+            <div className="w-1/2 py-6 text-center">
               End Time: <br />
               4:30 PM
             </div>
-            <div className="w-1/2 text-center py-6">
+            <div className="w-1/2 py-6 text-center">
               Total Cost: <br />
               Nu. 100
             </div>
@@ -112,27 +141,24 @@ export default function VehicleHome() {
           </div> */}
 
           <div className="flex justify-center pt-6">
-            <Link href={"/driver/offenseStatus"} className="w-3/4 sm:w-1/2"  >
-                <button className=" px-3 py-3 font-semibold text-xl ml-2 rounded-full bg-fuchsia-400 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
-                  Continue
-                </button>
+            <Link href={"/driver/offenseStatus"} className="w-3/4 sm:w-1/2">
+              <button className=" ml-2 rounded-full bg-fuchsia-400 px-3 py-3 text-xl font-semibold hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
+                Continue
+              </button>
             </Link>
           </div>
-
-
         </div>
       </main>
     </>
   );
 }
 
-
 const AuthShowcase: React.FC = () => {
   const { data: sessionData } = useSession();
 
   const { data: secretMessage } = api.example.getSecretMessage.useQuery(
     undefined, // no input
-    { enabled: sessionData?.user !== undefined },
+    { enabled: sessionData?.user !== undefined }
   );
 
   return (
