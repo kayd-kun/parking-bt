@@ -5,22 +5,36 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import DistrictListCard from "../../components/driver/districtListCard";
+import { api } from "../../utils/api";
 
 const Home: NextPage = () => {
   // Get the districts from the API
   // TODO: Replace this with an API call
-  const districts = [
-    {
-      id: 1,
-      name: "Thimphu",
-      image: "/images/districts/thimphu.jpg",
-    },
-    {
-      id: 2,
-      name: "Paro",
-      image: "/images/districts/paro.jpg",
-    },
-  ];
+  
+  const getDistrictData = api.driver.getDistricts.useQuery(); 
+  const districts = getDistrictData.data?.districts;
+
+  // const districts = [
+  //   {
+  //     id: 1,
+  //     name: "Thimphu",
+  //     // image: "/images/districts/thimphu.jpg",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Paro",
+  //     // image: "/images/districts/paro.jpg",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Chukha",
+  //   },
+  // ];
+  
+  if(!districts) {
+    return <div>Loading...</div>
+  }
+
   return (
     <>
       <Head>
@@ -84,10 +98,11 @@ const Home: NextPage = () => {
 
         {/* District Listings */}
         <div className="mt-12 flex flex-col gap-6">
-          <DistrictListCard />
-          <DistrictListCard />
-          <DistrictListCard />
-          <DistrictListCard />
+          {
+          districts.map((district) => (
+            <DistrictListCard district={district}/>
+          ))
+          }
         </div>
         
         {/* NOTE: The User will select the zone and need not press NEXT button

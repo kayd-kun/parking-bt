@@ -1,14 +1,21 @@
 import Link from "next/link";
 import { GoLocation } from "react-icons/go";
 
-export default function DistrictListCard() {
+export default function DistrictListCard({district}: {
+  district: {
+    id: number,
+    name: string,
+  },
+}) {
+
+  const {id, name} = district;
   return (
     <>
       <div className=" flex justify-center">
         <div className=" flex gap-8 max-w-sm text-2xl flex-row rounded-lg bg-white p-6 shadow-lg">
           <GoLocation className="w-7 h-7" />
           <Link href={"/driver/district/zone"} className="">
-            <button>Thimphu,Bhutan</button>
+            <button>{district.name}, Bhutan</button>
           </Link>
           <p />
         </div>
