@@ -15,23 +15,45 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <div>
-          <div className="flex-row">
+          {/* <-- and Select Zone Title */}
+          <div>
+            {/* Back Arrow Button  */}
             <div>
-              <button className="pl-4 pt-3" >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 absolute left-10 top-10">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              <button className="pl-4 pt-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="absolute left-10 top-10 h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
                 </svg>
               </button>
             </div>
+
+            {/* Select Zone Title */}
+            <div>
+              <h1 className="text- left text-extrabold mt-3 block  text-center text-xl font-medium text-black">
+                Select Zone
+              </h1>
+            </div>
           </div>
+
+          {/* District Title */}
           <div>
-            <h1 className="text-xl text- left text-center block  font-medium text-black text-extrabold mt-3" >Select Zone</h1>
+            <h1 className="pt-2 pl-6 text-left text-base font-bold">
+              Phuntsholing
+            </h1>
           </div>
-          <div >
-            <h1 className="text-base font-bold pt-2 pl-6 text-left" >Phuntsholing</h1>
-          </div>
+
           <div className="">
-            <div className="mx-auto w-full mt-1">
+            <div className="mx-auto mt-1 w-full">
               <div className="relative w-full">
                 <input
                   className="h-10 w-full rounded-md border-2 border-cyan-700 bg-white p-5 text-sm "
@@ -61,79 +83,51 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </div>
-            <div >
-              <div
-                className="flex-1 grid grid-cols-3 gap-2 max-h-fit p-4 mx-w-sm mx-auto 
-          bg-white
-          rounded-xl 
-          shadow-lg 
-          space-x-1
-          mt-6
-          ">
-                <div className="flex justify-center">
-
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mt-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-
-                </div>
-                <div>
-                  <h1 className="font-bold">Zangdhophelri</h1>
-                  <h1 className="font-thin text-sm text-slate-600">Phuentsholing, Bhutan</h1>
-                  <h1 className="text-xs">Two Wheeler: Nu:20/hr</h1>
-                  <h1 className="text-xs">Four Wheeler: Nu:50/hr</h1>
-                </div>
-                <div>
-                  <a href="/select">
-                    <button
-                      type="button"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="light"
-                      className="inline-block 
-              px-5 py-5
-              bg-[#0D76D7] text-white 
-              font-medium text-xs 
-              leading-tight uppercase 
-              rounded-full shadow-md hover:bg-blue-700 
-              hover:shadow-lg focus:bg-blue-700 
-              focus:shadow-lg focus:outline-none focus:ring-0
-               active:bg-white active:shadow-lg 
-              transition duration-150 ease-in-out">View Map
-                    </button>
-                  </a>
-                </div>
-              </div>
-
 
             </div>
             <div
               className="
-          flex-1
-          grid grid-cols-3
-          gap-2 
+          mx-w-sm
+          mx-auto mt-6
+          grid 
           max-h-fit 
      
-          p-4
-          mx-w-sm 
-          mx-auto 
-          bg-white
-          rounded-xl 
-          shadow-lg 
+          flex-1
+          grid-cols-3 
+          gap-2 
           space-x-1
-          mt-6
-          ">
+          rounded-xl 
+          bg-white 
+          p-4
+          shadow-lg
+          "
+            >
               <div className="flex justify-center">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mt-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="mt-5 h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
                 </svg>
-
               </div>
               <div>
                 <h1 className="font-bold">Jordan lam</h1>
-                <h1 className="font-thin text-sm text-slate-600">Phuentsholing, Bhutan</h1>
+                <h1 className="text-sm font-thin text-slate-600">
+                  Phuentsholing, Bhutan
+                </h1>
                 <h1 className="text-xs">Two Wheeler: Nu:20/hr</h1>
                 <h1 className="text-xs">Four Wheeler: Nu:40/hr</h1>
               </div>
@@ -144,46 +138,64 @@ const Home: NextPage = () => {
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     className="inline-block 
-              px-5 py-5
-              bg-[#0D76D7] text-white 
-              font-medium text-xs 
-              leading-tight uppercase 
-              rounded-full shadow-md hover:bg-blue-700 
-              hover:shadow-lg focus:bg-blue-700 
-              focus:shadow-lg focus:outline-none focus:ring-0
-               active:bg-white active:shadow-lg 
-              transition duration-150 ease-in-out">View Map
+              rounded-full bg-[#0D76D7]
+              px-5 py-5 
+              text-xs font-medium 
+              uppercase leading-tight 
+              text-white shadow-md transition 
+              duration-150 ease-in-out 
+              hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
+               focus:shadow-lg focus:outline-none 
+              focus:ring-0 active:bg-white active:shadow-lg"
+                  >
+                    View Map
                   </button>
                 </a>
               </div>
             </div>
             <div
               className="
-          flex-1
-          grid grid-cols-3
-          gap-2 
+          mx-w-sm
+          mx-auto mt-6
+          grid 
           max-h-fit 
      
-          p-4
-          mx-w-sm 
-          mx-auto 
-          bg-white
-          rounded-xl 
-          shadow-lg 
+          flex-1
+          grid-cols-3 
+          gap-2 
           space-x-1
-          mt-6
-          ">
+          rounded-xl 
+          bg-white 
+          p-4
+          shadow-lg
+          "
+            >
               <div className="flex justify-center">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mt-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="mt-5 h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
                 </svg>
-
               </div>
               <div>
                 <h1 className="font-bold">Lower Market</h1>
-                <h1 className="font-thin text-sm text-slate-600">Phuentsholing, Bhutan</h1>
+                <h1 className="text-sm font-thin text-slate-600">
+                  Phuentsholing, Bhutan
+                </h1>
                 <h1 className="text-xs">Two Wheeler: Nu:20/hr</h1>
                 <h1 className="text-xs">Four Wheeler: Nu:50/hr</h1>
               </div>
@@ -194,15 +206,17 @@ const Home: NextPage = () => {
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     className="inline-block 
-              px-5 py-5
-              bg-[#0D76D7] text-white 
-              font-medium text-xs 
-              leading-tight uppercase 
-              rounded-full shadow-md hover:bg-blue-700 
-              hover:shadow-lg focus:bg-blue-700 
-              focus:shadow-lg focus:outline-none focus:ring-0
-               active:bg-white active:shadow-lg 
-              transition duration-150 ease-in-out">View Map
+              rounded-full bg-[#0D76D7]
+              px-5 py-5 
+              text-xs font-medium 
+              uppercase leading-tight 
+              text-white shadow-md transition 
+              duration-150 ease-in-out 
+              hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
+               focus:shadow-lg focus:outline-none 
+              focus:ring-0 active:bg-white active:shadow-lg"
+                  >
+                    View Map
                   </button>
                 </a>
               </div>
@@ -210,31 +224,47 @@ const Home: NextPage = () => {
 
             <div
               className="
-          flex-1
-          grid grid-cols-3
-          gap-2 
+          mx-w-sm
+          mx-auto mt-6
+          grid 
           max-h-fit 
      
-          p-4
-          mx-w-sm 
-          mx-auto 
-          bg-white
-          rounded-xl 
-          shadow-lg 
+          flex-1
+          grid-cols-3 
+          gap-2 
           space-x-1
-          mt-6
-          ">
+          rounded-xl 
+          bg-white 
+          p-4
+          shadow-lg
+          "
+            >
               <div className="flex justify-center">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mt-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="mt-5 h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
                 </svg>
-
               </div>
               <div>
                 <h1 className="font-bold">Tashi complex</h1>
-                <h1 className="font-thin text-sm text-slate-600">Phuentsholing, Bhutan</h1>
+                <h1 className="text-sm font-thin text-slate-600">
+                  Phuentsholing, Bhutan
+                </h1>
                 <h1 className="text-xs">Two Wheeler: Nu:20/hr</h1>
                 <h1 className="text-xs">Four Wheeler: Nu:50/hr</h1>
               </div>
@@ -245,24 +275,25 @@ const Home: NextPage = () => {
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     className="inline-block 
-              px-5 py-5
-              bg-[#0D76D7] text-white 
-              font-medium text-xs 
-              leading-tight uppercase 
-              rounded-full shadow-md hover:bg-blue-700 
-              hover:shadow-lg focus:bg-blue-700 
-              focus:shadow-lg focus:outline-none focus:ring-0
-               active:bg-white active:shadow-lg 
-              transition duration-150 ease-in-out">View Map
+              rounded-full bg-[#0D76D7]
+              px-5 py-5 
+              text-xs font-medium 
+              uppercase leading-tight 
+              text-white shadow-md transition 
+              duration-150 ease-in-out 
+              hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
+               focus:shadow-lg focus:outline-none 
+              focus:ring-0 active:bg-white active:shadow-lg"
+                  >
+                    View Map
                   </button>
                 </a>
               </div>
             </div>
           </div>
-        </div>
       </main>
     </>
   );
 };
 
-export default Home
+export default Home;
