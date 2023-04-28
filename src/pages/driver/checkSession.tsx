@@ -11,7 +11,9 @@ export default function VehicleStatus() {
       <main className="">
         {/* Title & Back arrow */}
         <div className="flex flex-row justify-center gap-4 py-6">
-          <BiArrowBack className="relative h-7 w-7 text-gray-400" />
+          <Link href={"/"}>
+            <BiArrowBack className="relative h-7 w-7 text-gray-400" />
+          </Link>
           <span>Current Session</span>
         </div>
 
@@ -24,26 +26,35 @@ export default function VehicleStatus() {
           {/* Details Card */}
           {/* TODO: Align the texts using grid */}
           <div className="h-52 w-3/4 rounded-lg p-10 text-center shadow transition hover:shadow-lg">
-            Address: Zangthopelri Zone Date: 4th Jan 2024 Vehicle Type: Light
-            Vehicle Vehicle Number: BP-1-A-1234 Duration: 1 Hour Time: 10:00AM -
-            11:00AM
+            Address: Zangthopelri Zone <br />
+            Date: 4th Jan 2024 <br />
+            Vehicle Type: Light Vehicle
+            <br />
+            Vehicle Number: BP-1-A-1234 <br />
+            Duration: 1 Hour <br />
+            Time: 10:00AM - 11:00AM
           </div>
-          <Link href={"/"} className="ml-2 w-3/4 px-4 py-2">
-            <button
-              type="button"
-              className=" ml-2 inline w-96 rounded-full bg-fuchsia-400 px-4 py-2 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800"
-            >
-              Extend Session
-            </button>
-          </Link>
-          <Link href={"/driver/parkingHistory"} className="ml-2 w-3/4 px-4 py-2">
-            <button
-              type="button"
-              className="ml-2 inline w-96 rounded-full bg-fuchsia-400 px-4 py-2 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800"
-            >
-              Check Past Sessions
-            </button>
-          </Link>
+          <div className="flex-col h-96 w-96 justify-center items-center">
+              <Link href={"/"} className="w-3/4 py-2">
+                <button
+                  type="button"
+                  className="w-96 rounded-full bg-blue-500 py-2 hover:bg-blue-500"
+                >
+                  Extend Session
+                </button>
+              </Link>
+
+              <Link
+                href={"/driver/parkingHistory"}
+              >
+                <button
+                  type="button"
+                  className="mt-10 inline w-96 rounded-full bg-blue-500 py-2 hover:bg-blue-500"
+                >
+                  Check Past Sessions
+                </button>
+              </Link>
+          </div>
         </div>
       </main>
     </>

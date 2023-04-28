@@ -26,7 +26,7 @@ export default function PaymentConfirmation() {
           items-center 
           space-x-4
           rounded-xl 
-          bg-[#0D76D7] 
+        bg-blue-500 
           p-10 
           text-center 
           shadow-lg "

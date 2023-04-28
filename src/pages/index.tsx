@@ -48,10 +48,10 @@ export default function VehicleHome() {
                 placeholder="BP-1-A1234"
                 className="ml-2 w-2/4 rounded-md py-2 pl-10 text-sm focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:border-teal-400 focus:dark:bg-gray-900 sm:w-auto"
               />
-              <Link href="/vehicle/status">
+              <Link href="/driver/checkSession">
                 <button
                   type="button"
-                  className="w-30 ml-2 inline rounded-full bg-fuchsia-400 px-4 py-2 hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800"
+                  className="w-30 ml-2 inline rounded-full bg-blue-500 px-4 py-2 hover:bg-blue-500 dark:text-gray-800"
                 >
                   Check Session
                 </button>
@@ -140,12 +140,14 @@ export default function VehicleHome() {
           {/* <div>
           </div> */}
 
-          <div className="flex justify-center pt-6">
-            <Link href={"/driver/offenseStatus"} className="w-3/4 sm:w-1/2">
-              <button className=" ml-2 rounded-full bg-fuchsia-400 px-3 py-3 text-xl font-semibold hover:bg-fuchsia-700 dark:bg-black dark:text-gray-800">
-                Continue
-              </button>
-            </Link>
+          <div className="flex h-96 w-96 justify-center">
+            <div className="mt-10">
+              <Link href={"/driver/offenseStatus"} className="w-3/4 sm:w-1/2 ">
+                <button className="rounded-full bg-blue-500  px-10 py-4 text-xl font-semibold hover:bg-blue-500">
+                  Continue
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
